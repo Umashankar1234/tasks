@@ -34,7 +34,12 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
+.error {
+  border-width: 1px 1px 1px 10px;
+  border-style: solid;
+  border-color: rgb(191, 22, 80) rgb(191, 22, 80) rgb(191, 22, 80)
+    rgb(236, 89, 144);
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

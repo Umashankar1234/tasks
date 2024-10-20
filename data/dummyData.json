@@ -1,0 +1,17 @@
+{
+  "users": [
+    { "id": "0", "name": "Uma" },
+    { "id": "1", "name": "Namita" },
+    { "id": "2", "name": "Ram" }
+  ],
+  "priorities": [
+    { "id": "0", "label": "Low" },
+    { "id": "1", "label": "Medium" },
+    { "id": "2", "label": "High" }
+  ],
+  "statuses": [
+    { "id": "0", "label": "To do" },
+    { "id": "1", "label": "In progress" },
+    { "id": "2", "label": "Completed" }
+  ]
+}
