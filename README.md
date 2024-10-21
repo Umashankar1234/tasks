@@ -1,40 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Task Management System
+This is a Task Management System built with Next.js, React, and Zustand for efficient state management. The app supports features such as adding new tasks, editing existing tasks, and filtering tasks by status and title.
 
-## Getting Started
+Features
+Task Creation: Add new tasks with details such as title, assignee, priority, due date, and status.
+Task Editing: Edit existing tasks seamlessly.
+Task Filtering: Filter tasks by title or status for easy navigation.
+Pagination: Supports pagination to display tasks in chunks for better performance.
+Form Validation: Uses Yup for schema-based validation and React Hook Form for form handling.
+Notifications: Uses React Toastify to provide real-time notifications and feedback to users.
+Technologies Used
+Next.js: For server-side rendering, routing, and API support.
+React: For building the user interface.
+Zustand: For state management, providing a simple yet powerful way to manage global state.
+React Hook Form: For efficient form handling and validation.
+Yup: For schema-based form validation.
+React Toastify: For toast notifications.
+Packages Used
+next: The framework used for server-side rendering and static site generation.
+react: Core library for building UI components.
+react-dom: Provides DOM-specific methods for React.
+zustand: Used for managing the application’s global state without the boilerplate of Redux.
+react-hook-form: Simplifies form management with minimal re-renders.
+@hookform/resolvers: Provides schema validation (Yup in this case) for react-hook-form.
+yup: A schema builder for value parsing and validation.
+react-toastify: Adds toast notifications for user feedback.
+Getting Started
+To run the project locally, follow the instructions below.
 
-First, run the development server:
+Prerequisites
+Ensure you have Node.js and npm installed on your local machine.
 
-```bash
+Clone the repository:
+git clone https://github.com/your-repo/task-management-system.git
+Navigate to the project directory:
+cd task-management-system
+Install the dependencies:
+npm install
+Running the Project
+After the dependencies are installed, start the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This will start the server on http://localhost:3000.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+You can now view the application in your browser by navigating to http://localhost:3000.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
