@@ -40,8 +40,79 @@ a {
   border-color: rgb(191, 22, 80) rgb(191, 22, 80) rgb(191, 22, 80)
     rgb(236, 89, 144);
 }
+.customBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+.Home_main__2uIek {
+  position: relative;
+  width: 100%;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 0 15px #b8b8b8;
+}
+.hg {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 25px;
+  background: #357553;
+}
+.hg h1 {
+  font-size: 23px;
+  margin: 0;
+  font-weight: 600;
+  color: #ffff;
+}
+.btn-one {
+  background: #ffe6a5;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 40px;
+  transition: 0.5s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+.table-responsive {
+  overflow: auto;
+  padding: 20px;
+}
+table.custom tr th:nth-last-child(1),
+table.custom tr td:nth-last-child(1) {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+table.custom tr th:nth-child(1),
+table.custom tr td:nth-child(1) {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+table.custom tr td {
+  border-bottom: none !important;
+}
+table.custom tr:nth-child(even) td {
+  background-color: rgb(176 153 93 / 20%);
+}
+table.custom tr:nth-child(odd) td {
+  background-color: #eeeeee;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0 1em;
+}
+@media (max-width: 767px) {
+  .btn-one {
+    padding: 2px 9px;
+    border-radius: 12px;
   }
 }

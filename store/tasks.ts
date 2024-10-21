@@ -19,7 +19,6 @@ interface TaskStore {
   updateTask: (taskId: string, updatedTask: Partial<TaskData>) => void;
   updateStatus: (taskId: string, newStatus: string) => void;  
   removeTask: (taskId: string) => void;
-  clearTasks: () => void;
 }
 
 // Create the store
@@ -58,11 +57,7 @@ const useStore = create<TaskStore>()(
           toast.error("Task removed successfully!"); // Show error toast
           return { tasks: filteredTasks };
         });
-      },
-      clearTasks: () => {
-        set({ tasks: [] });
-        toast.warning("All tasks cleared!"); // Show warning toast
-      },
+      },      
     }),
     {
       name: "task-storage",

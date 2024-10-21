@@ -43,12 +43,12 @@ const TableItem: React.FC<TableItemProps> = ({ data, onEdit, index }) => {
 
     const getStatusById = (id: string) => {
         const status = userData.statuses.find(s => s.id === id);
-        return status ? status.label : id; // Return status or ID if not found
+        return status ? status.id : id; // Return status or ID if not found
     };
 
     return (
         <tr>
-            <th scope="row">{index}</th>
+            <td scope="row">{index}</td>
             <td>{data.title}</td>
             <td>{getUserNameById(data.assignee)}</td>
             <td>{getPriorityById(data.priority)}</td>

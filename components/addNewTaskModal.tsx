@@ -65,38 +65,44 @@ const AddNewTaskModal: React.FC<AddNewTaskModalProps> = ({
 
     // Submit handler
     const handleFormSubmit = (formData: TaskData) => {
+        const localDueDate = new Date(formData.dueDate).toLocaleDateString('en-CA');
+
         const taskData: TaskData = {
             id: editMode && data ? data.id : String(Date.now()), // Use existing ID if in edit mode, else create a new one
             title: formData.title,
             description: formData.description,
             assignee: formData.assignee,
             priority: formData.priority,
-            dueDate: formData.dueDate,
+            dueDate: localDueDate,
             status: formData.status,
         };
-        if (editMode) return onSubmit(data!.id, taskData);
+        if (editMode) { onSubmit(data!.id, taskData); return closeBtnRef.current!.click(); }
         onSubmit(taskData); // Call the parent's onSubmit handler
         reset(); // Reset form after submission
         closeBtnRef.current!.click();
     };
 
     return (
-        <div>
-            <button
-                type="button"
-                className="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-                onClick={() => {
-                    if (setCurrentTask && setEditMode) {
-                        setCurrentTask(null); // Reset current task
-                        setEditMode(false); // Switch to add mode
-                        reset(); // Clear form fields
-                    }
-                }}
-            >
-                Add New Task
-            </button>
+        <>
+            <div className='hg'>
+                <h1>Tasks for Test Project</h1>
+                <button
+                    type="button"
+                    className="btn-one"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                    onClick={() => {
+                        if (setCurrentTask && setEditMode) {
+                            setCurrentTask(null); // Reset current task
+                            setEditMode(false); // Switch to add mode
+                            reset(); // Clear form fields
+                        }
+                    }}
+                >
+                    Add New Task
+                </button>
+            </div>
+
 
             {/* Modal */}
             <div className="modal fade" id="exampleModal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -183,7 +189,7 @@ const AddNewTaskModal: React.FC<AddNewTaskModalProps> = ({
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 

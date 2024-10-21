@@ -30,7 +30,7 @@ export default function Home() {
         className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}
       >
         <main className={styles.main}>
-          <h1>Tasks for Test Project</h1>
+          
           <Table />
         </main>
 
